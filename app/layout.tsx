@@ -26,8 +26,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-[#f9fbff] antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-white antialiased`}
       >
+        <div
+          aria-hidden
+          className="pointer-events-none fixed inset-0 -z-10 bg-[linear-gradient(120deg,_#edf5ff_0%,_#fff5e6_100%)]"
+        />
         <SiteShell>{children}</SiteShell>
       </body>
     </html>

@@ -64,9 +64,9 @@ export function SiteShell({ children }: { children: ReactNode }) {
   };
 
   return (
-    <div className="flex min-h-screen flex-col bg-[#f3f7fb] font-sans">
+    <div className="flex min-h-screen flex-col bg-transparent font-sans">
       <header className="flex justify-center bg-transparent px-6 py-8 sm:px-8">
-        <div className="flex w-full max-w-7xl flex-col gap-4 rounded-2xl border border-transparent bg-white px-8 py-5 shadow-[0_25px_60px_rgba(15,23,42,0.08)] ring-1 ring-black/5 sm:px-12">
+        <div className="flex w-full max-w-7xl flex-col gap-4 rounded-3xl border-2 border-zinc-200 bg-white px-8 py-5 sm:px-12">
           <div className="flex w-full items-center gap-5">
             <span className="text-lg font-semibold tracking-tight text-zinc-900">
               Chris Manfredi
@@ -134,10 +134,10 @@ export function SiteShell({ children }: { children: ReactNode }) {
         </div>
       </header>
 
-      <main className="flex flex-1 justify-center bg-[#f3f7fb] px-6 pb-16 sm:px-8">
+      <main className="flex flex-1 justify-center bg-transparent px-6 pb-16 sm:px-8">
         <div className="flex w-full max-w-7xl flex-col gap-10 lg:flex-row">
           {isHome ? (
-            <aside className="flex flex-1 flex-col gap-6 rounded-2xl border border-transparent bg-white px-6 py-6 text-left shadow-[0_20px_45px_rgba(15,23,42,0.06)] ring-1 ring-black/5 lg:max-w-xs">
+            <aside className="flex flex-1 flex-col gap-6 rounded-2xl border-2 border-zinc-200 bg-white px-6 py-6 text-left lg:max-w-xs">
               <div className="flex flex-col items-center gap-4 text-center">
                 <div className="relative h-32 w-32 overflow-hidden rounded-2xl">
                   <Image
@@ -200,7 +200,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
               </div>
             </aside>
           ) : (
-            <aside className="flex w-full flex-col items-center gap-5 self-start rounded-2xl border border-transparent bg-white px-8 py-8 text-center shadow-[0_20px_45px_rgba(15,23,42,0.06)] ring-1 ring-black/5 sm:px-10 lg:w-72">
+            <aside className="flex w-full flex-col items-center gap-5 self-start rounded-2xl border-2 border-zinc-200 bg-white px-8 py-8 text-center sm:px-10 lg:w-72">
               <div className="relative h-32 w-32 overflow-hidden rounded-2xl">
                 <Image
                   src="/profile.jpg"
@@ -241,7 +241,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
             className={`flex flex-1 flex-col text-zinc-800 ${
               isHome
                 ? "items-stretch justify-start gap-8 bg-transparent px-0 py-0 text-left"
-                : "items-center justify-center rounded-2xl border border-transparent bg-white px-10 py-16 text-center shadow-[0_20px_45px_rgba(15,23,42,0.05)] ring-1 ring-black/5 sm:px-16 sm:py-24 lg:items-start lg:text-left"
+                : "items-center justify-center rounded-2xl border-2 border-zinc-200 bg-white px-10 py-16 text-center sm:px-16 sm:py-24 lg:items-start lg:text-left"
             }`}
           >
             {children}

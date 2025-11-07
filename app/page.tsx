@@ -32,7 +32,7 @@ export default function HomePage() {
   return (
     <div className="flex h-full flex-col gap-8">
       <div className="grid w-full flex-1 grid-cols-1 gap-6 content-between md:grid-cols-2 md:grid-rows-2 lg:gap-8 lg:[grid-template-columns:minmax(0,1.35fr)_minmax(0,0.95fr)]">
-        <div className="group flex h-full min-h-[160px] flex-col justify-between rounded-3xl border border-transparent bg-white p-6 ring-1 ring-black/5 lg:min-h-[180px] lg:p-8">
+        <div className="group flex h-full min-h-[160px] flex-col justify-between rounded-3xl border-2 border-zinc-200 bg-white p-6 lg:min-h-[180px] lg:p-8">
           <div className="flex flex-col gap-3">
             <div>
               <h2 className="text-xl font-semibold text-zinc-900">Expert Area&apos;s</h2>
@@ -67,7 +67,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="flex h-full min-h-[320px] flex-col justify-between rounded-3xl border border-transparent bg-white p-6 ring-1 ring-black/5 md:row-span-2 lg:min-h-[380px] lg:p-8">
+        <div className="flex h-full min-h-[320px] flex-col justify-between rounded-3xl border-2 border-zinc-200 bg-white p-6 md:row-span-2 lg:min-h-[380px] lg:p-8">
           <div className="flex flex-col gap-4">
             <h2 className="text-xl font-semibold text-zinc-900">Recent Projects</h2>
             <div className="grid gap-4">
@@ -102,7 +102,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="flex h-full min-h-[140px] flex-col justify-between rounded-3xl border border-transparent bg-white p-6 ring-1 ring-black/5 lg:min-h-[180px] lg:p-8">
+        <div className="flex h-full min-h-[140px] flex-col justify-between rounded-3xl border-2 border-zinc-200 bg-white p-6 lg:min-h-[180px] lg:p-8">
           <div className="flex flex-col gap-2">
             <h2 className="text-xl font-semibold text-zinc-900">Title 2</h2>
             <p className="text-sm text-zinc-600">Text Text Text</p>
