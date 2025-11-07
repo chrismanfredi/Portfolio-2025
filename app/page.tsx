@@ -32,13 +32,13 @@ export default function HomePage() {
   return (
     <div className="flex h-full flex-col gap-8">
       <div className="grid w-full flex-1 grid-cols-1 gap-6 content-between md:grid-cols-2 md:grid-rows-2 lg:gap-8 lg:[grid-template-columns:minmax(0,1.35fr)_minmax(0,0.95fr)]">
-        <div className="group flex h-full min-h-[300px] flex-col justify-between rounded-3xl border border-transparent bg-white p-8 ring-1 ring-black/5 lg:min-h-[360px] lg:p-10">
+        <div className="group flex h-full min-h-[160px] flex-col justify-between rounded-3xl border border-transparent bg-white p-6 ring-1 ring-black/5 lg:min-h-[180px] lg:p-8">
           <div className="flex flex-col gap-3">
             <div>
               <h2 className="text-xl font-semibold text-zinc-900">Expert Area&apos;s</h2>
             </div>
 
-            <div className="relative mt-1 h-56 overflow-hidden rounded-2xl border border-zinc-100 bg-zinc-50/60 p-3">
+            <div className="relative mt-1 h-[20rem] overflow-hidden rounded-2xl border border-zinc-100 bg-white/80 p-5 shadow-inner">
               <div
                 className="flex flex-col gap-3 hover:[animation-play-state:paused] group-hover:[animation-play-state:paused]"
                 style={{ animation: "strategy-scroll 12s linear infinite" }}
@@ -67,7 +67,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="flex h-full min-h-[560px] flex-col justify-between rounded-3xl border border-transparent bg-white p-8 ring-1 ring-black/5 md:row-span-2 lg:min-h-[640px] lg:p-10">
+        <div className="flex h-full min-h-[320px] flex-col justify-between rounded-3xl border border-transparent bg-white p-6 ring-1 ring-black/5 md:row-span-2 lg:min-h-[380px] lg:p-8">
           <div className="flex flex-col gap-4">
             <h2 className="text-xl font-semibold text-zinc-900">Recent Projects</h2>
             <div className="grid gap-4">
@@ -102,7 +102,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="flex h-full min-h-[260px] flex-col justify-between rounded-3xl border border-transparent bg-white p-8 ring-1 ring-black/5 lg:min-h-[320px] lg:p-10">
+        <div className="flex h-full min-h-[140px] flex-col justify-between rounded-3xl border border-transparent bg-white p-6 ring-1 ring-black/5 lg:min-h-[180px] lg:p-8">
           <div className="flex flex-col gap-2">
             <h2 className="text-xl font-semibold text-zinc-900">Title 2</h2>
             <p className="text-sm text-zinc-600">Text Text Text</p>
