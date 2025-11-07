@@ -8,7 +8,6 @@ import { useState, type ReactNode } from "react";
 const navItems = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  { label: "Services", href: "/services" },
   { label: "Works", href: "/works" },
   { label: "Contact", href: "/contact" },
 ] as const;
@@ -40,9 +39,19 @@ const socialLinks = [
   },
 ] as const;
 
+const servicesOffered = [
+  { label: "UI/UX Design", icon: "/file.svg" },
+  { label: "Web Development", icon: "/window.svg" },
+  { label: "Mobile App Development", icon: "/globe.svg" },
+  { label: "SEO-Friendly Code", icon: "/window.svg" },
+  { label: "Resume Design", icon: "/globe.svg" },
+  { label: "Social Media Management", icon: "/file.svg" },
+] as const;
+
 export function SiteShell({ children }: { children: ReactNode }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
+  const isHome = pathname === "/";
 
   const toggleMenu = () => setMobileMenuOpen((open) => !open);
   const closeMenu = () => setMobileMenuOpen(false);
@@ -55,9 +64,9 @@ export function SiteShell({ children }: { children: ReactNode }) {
   };
 
   return (
-    <div className="flex min-h-screen flex-col bg-zinc-50 font-sans">
+    <div className="flex min-h-screen flex-col bg-[#f3f7fb] font-sans">
       <header className="flex justify-center bg-transparent px-6 py-8 sm:px-8">
-        <div className="flex w-full max-w-6xl flex-col gap-4 rounded-2xl border border-black bg-white px-8 py-5 shadow-sm sm:px-12">
+        <div className="flex w-full max-w-7xl flex-col gap-4 rounded-2xl border border-transparent bg-white px-8 py-5 shadow-[0_25px_60px_rgba(15,23,42,0.08)] ring-1 ring-black/5 sm:px-12">
           <div className="flex w-full items-center gap-5">
             <span className="text-lg font-semibold tracking-tight text-zinc-900">
               Chris Manfredi
@@ -125,83 +134,124 @@ export function SiteShell({ children }: { children: ReactNode }) {
         </div>
       </header>
 
-      <main className="flex flex-1 justify-center bg-zinc-50 px-6 pb-16 sm:px-8">
-        <div className="flex w-full max-w-6xl flex-col gap-10 lg:flex-row">
-          <aside className="flex flex-1 flex-col items-center gap-6 rounded-2xl border border-zinc-200 bg-white px-8 py-10 text-center shadow-sm sm:px-10 lg:max-w-xs lg:text-left">
-            <div className="relative h-36 w-36 overflow-hidden rounded-2xl border border-zinc-200">
-              <Image
-                src="/profile.jpg"
-                alt="Chris Manfredi"
-                fill
-                className="object-cover"
-                sizes="144px"
-                priority
-              />
-            </div>
-            <div className="flex flex-col items-center gap-2 lg:items-start">
-              <h2 className="text-xl font-semibold text-zinc-900">
-                Chris Manfredi
-              </h2>
-              <p className="text-sm text-zinc-600">
-                Web developer crafting thoughtful digital experiences focused on
-                performance, accessibility, and clean design.
-              </p>
-            </div>
-            <div className="flex items-center gap-4">
-              {socialLinks.map(({ label, href, icon }) => (
-                <Link
-                  key={label}
-                  href={href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-zinc-200 text-zinc-700 transition hover:border-zinc-300 hover:text-zinc-900 focus:outline-none focus:ring-2 focus:ring-zinc-400 focus:ring-offset-2"
-                  aria-label={label}
-                >
-                  {icon}
-                </Link>
-              ))}
-            </div>
+      <main className="flex flex-1 justify-center bg-[#f3f7fb] px-6 pb-16 sm:px-8">
+        <div className="flex w-full max-w-7xl flex-col gap-10 lg:flex-row">
+          {isHome ? (
+            <aside className="flex flex-1 flex-col gap-6 rounded-2xl border border-transparent bg-white px-6 py-6 text-left shadow-[0_20px_45px_rgba(15,23,42,0.06)] ring-1 ring-black/5 lg:max-w-xs">
+              <div className="flex flex-col items-center gap-4 text-center">
+                <div className="relative h-32 w-32 overflow-hidden rounded-2xl">
+                  <Image
+                    src="/cartoon.png"
+                    alt="Chris Manfredi"
+                    fill
+                    className="object-cover object-[50%_20%]"
+                    sizes="256px"
+                    priority
+                  />
+                </div>
+                <div className="flex flex-col gap-1">
+                  <h2 className="text-lg font-semibold text-zinc-900">Chris Manfredi</h2>
+                  <p className="text-sm text-zinc-600">
+                    Web developer crafting thoughtful digital experiences focused on performance,
+                    accessibility, and clean design.
+                  </p>
+                </div>
+                <div className="flex items-center gap-3">
+                  {socialLinks.map(({ label, href, icon }) => (
+                    <Link
+                      key={label}
+                      href={href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex h-9 w-9 items-center justify-center rounded-full border border-zinc-200 text-zinc-700 transition hover:border-zinc-300 hover:text-zinc-900 focus:outline-none focus:ring-2 focus:ring-zinc-400 focus:ring-offset-2"
+                      aria-label={label}
+                    >
+                      {icon}
+                    </Link>
+                  ))}
+                </div>
+              </div>
 
-            <div className="w-full text-left">
-              <p className="mt-6 text-xs font-semibold uppercase tracking-[0.3em] text-zinc-400">
-                Services Offered
-              </p>
-              <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-1">
-                {[
-                  { label: "Product Strategy", icon: "/file.svg" },
-                  { label: "UI Engineering", icon: "/window.svg" },
-                  { label: "Launch Support", icon: "/globe.svg" },
-                  { label: "Launch Support 2", icon: "/globe.svg" },
-                  { label: "Launch Support 3", icon: "/globe.svg" },
-                  { label: "Launch Support 4", icon: "/globe.svg" },
-                ].map((service) => (
-                  <div
-                    key={service.label}
-                    className="flex flex-col items-center gap-3 rounded-2xl border border-zinc-200 px-4 py-3 text-center text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500 sm:flex-row sm:justify-between sm:text-left sm:text-sm sm:normal-case sm:tracking-normal sm:text-zinc-700"
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-zinc-400">
+                  Services Offered
+                </p>
+                <div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-1">
+                  {servicesOffered.map((service) => (
+                    <div
+                      key={service.label}
+                      className="flex flex-col items-center gap-3 rounded-2xl border border-white/70 bg-white/90 px-4 py-3 text-center text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500 shadow-sm ring-1 ring-black/5 sm:flex-row sm:justify-between sm:text-left sm:text-sm sm:normal-case sm:tracking-normal sm:text-zinc-700"
+                    >
+                      <span className="order-2 w-full sm:order-1 sm:w-auto">
+                        {service.label}
+                      </span>
+                      <span className="order-1 relative h-8 w-8 overflow-hidden rounded-xl bg-zinc-50 sm:order-2">
+                        <Image
+                          src={service.icon}
+                          alt=""
+                          fill
+                          sizes="32px"
+                          className="object-contain p-2"
+                        />
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </aside>
+          ) : (
+            <aside className="flex w-full flex-col items-center gap-5 self-start rounded-2xl border border-transparent bg-white px-8 py-8 text-center shadow-[0_20px_45px_rgba(15,23,42,0.06)] ring-1 ring-black/5 sm:px-10 lg:w-72">
+              <div className="relative h-32 w-32 overflow-hidden rounded-2xl">
+                <Image
+                  src="/profile.jpg"
+                  alt="Chris Manfredi"
+                  fill
+                  className="object-cover object-top"
+                  sizes="256px"
+                  priority
+                />
+              </div>
+              <div className="flex flex-col items-center gap-2 text-center">
+                <h2 className="text-lg font-semibold text-zinc-900">
+                  Chris Manfredi
+                </h2>
+                <p className="text-sm text-zinc-600">
+                  Web developer crafting thoughtful digital experiences focused on
+                  performance, accessibility, and clean design.
+                </p>
+              </div>
+              <div className="flex items-center gap-3">
+                {socialLinks.map(({ label, href, icon }) => (
+                  <Link
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex h-9 w-9 items-center justify-center rounded-full border border-zinc-200 text-zinc-700 transition hover:border-zinc-300 hover:text-zinc-900 focus:outline-none focus:ring-2 focus:ring-zinc-400 focus:ring-offset-2"
+                    aria-label={label}
                   >
-                    <span className="order-2 w-full sm:order-1 sm:w-auto">
-                      {service.label}
-                    </span>
-                    <span className="order-1 relative h-8 w-8 overflow-hidden rounded-xl bg-zinc-50 sm:order-2">
-                      <Image
-                        src={service.icon}
-                        alt=""
-                        fill
-                        sizes="32px"
-                        className="object-contain p-2"
-                      />
-                    </span>
-                  </div>
+                    {icon}
+                  </Link>
                 ))}
               </div>
-            </div>
-          </aside>
+            </aside>
+          )}
 
-          <section className="flex flex-1 flex-col items-center justify-center rounded-2xl border border-zinc-200 bg-white px-10 py-16 text-center text-zinc-800 shadow-sm sm:px-16 sm:py-24 lg:items-start lg:text-left">
+          <section
+            className={`flex flex-1 flex-col text-zinc-800 ${
+              isHome
+                ? "items-stretch justify-start gap-8 bg-transparent px-0 py-0 text-left"
+                : "items-center justify-center rounded-2xl border border-transparent bg-white px-10 py-16 text-center shadow-[0_20px_45px_rgba(15,23,42,0.05)] ring-1 ring-black/5 sm:px-16 sm:py-24 lg:items-start lg:text-left"
+            }`}
+          >
             {children}
           </section>
         </div>
       </main>
+
+      <footer className="border-t border-zinc-200 bg-white py-6 text-center text-xs text-zinc-500">
+        © {new Date().getFullYear()} Chris Manfredi. Crafted with Next.js.
+      </footer>
     </div>
   );
 }
