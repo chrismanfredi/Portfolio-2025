@@ -11,10 +11,10 @@ const recentProjects = [
     image: "/trackmytime.png",
   },
   {
-    title: "Summit Analytics",
-    description: "Real-time data dashboard for enterprise insights.",
+    title: "Slice Station",
+    description: "Slice Station is a sleek, responsive website designed for a local pizza restaurant.",
     href: "/works",
-    image: "/globe.svg",
+    image: "/slice-station.png",
   },
 ] as const;
 
@@ -32,13 +32,13 @@ export default function HomePage() {
   return (
     <div className="flex h-full flex-col gap-8">
       <div className="grid w-full flex-1 grid-cols-1 gap-6 content-between md:grid-cols-2 md:grid-rows-2 lg:gap-8 lg:[grid-template-columns:minmax(0,1.35fr)_minmax(0,0.95fr)]">
-        <div className="group flex h-full min-h-[160px] flex-col justify-between rounded-3xl border-2 border-zinc-200 bg-white p-6 lg:min-h-[180px] lg:p-8">
+        <div className="group flex h-full min-h-[180px] flex-col justify-between rounded-3xl border border-transparent bg-white p-8 ring-1 ring-black/5 lg:min-h-[200px] lg:p-10">
           <div className="flex flex-col gap-3">
             <div>
               <h2 className="text-xl font-semibold text-zinc-900">Expert Area&apos;s</h2>
             </div>
 
-            <div className="relative mt-1 h-[20rem] overflow-hidden rounded-2xl border border-zinc-100 bg-white/80 p-5 shadow-inner">
+            <div className="relative mt-1 h-[22rem] overflow-hidden rounded-2xl border border-zinc-100 bg-white/80 p-5 shadow-inner">
               <div
                 className="flex flex-col gap-3 hover:[animation-play-state:paused] group-hover:[animation-play-state:paused]"
                 style={{ animation: "strategy-scroll 12s linear infinite" }}
@@ -67,7 +67,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="flex h-full min-h-[320px] flex-col justify-between rounded-3xl border-2 border-zinc-200 bg-white p-6 md:row-span-2 lg:min-h-[380px] lg:p-8">
+        <div className="flex h-full min-h-[380px] flex-col justify-between rounded-3xl border border-transparent bg-white p-8 ring-1 ring-black/5 md:row-span-2 lg:min-h-[440px] lg:p-10">
           <div className="flex flex-col gap-4">
             <h2 className="text-xl font-semibold text-zinc-900">Recent Projects</h2>
             <div className="grid gap-4">
@@ -102,14 +102,33 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="flex h-full min-h-[140px] flex-col justify-between rounded-3xl border-2 border-zinc-200 bg-white p-6 lg:min-h-[180px] lg:p-8">
+        <div className="flex h-full min-h-[140px] flex-col gap-5 rounded-3xl border-2 border-zinc-200 bg-white p-6 lg:min-h-[180px] lg:p-8">
           <div className="flex flex-col gap-2">
-            <h2 className="text-xl font-semibold text-zinc-900">Title 2</h2>
-            <p className="text-sm text-zinc-600">Text Text Text</p>
+            <h2 className="text-xl font-semibold text-zinc-900">Skills</h2>
           </div>
-          <span className="text-xs font-semibold uppercase tracking-[0.3em] text-zinc-400">
-            Learn More
-          </span>
+          <div className="flex flex-col gap-6 lg:mx-auto lg:mt-4 lg:w-4/5 lg:justify-center">
+            {[
+              { label: "HTML", value: 95, color: "bg-indigo-500" },
+              { label: "CSS | Tailwind CSS", value: 85, color: "bg-indigo-500" },
+              { label: "React | Next.js", value: 80, color: "bg-indigo-500" },
+              { label: "GitHib", value: 90, color: "bg-indigo-500" },
+              { label: "Responsive Design", value: 90, color: "bg-indigo-500" },
+              { label: "Graphic Design", value: 85, color: "bg-indigo-500" },
+            ].map((bar) => (
+              <div key={bar.label} className="flex flex-col gap-2">
+                <div className="flex items-center justify-between text-lg font-semibold text-zinc-800">
+                  <span>{bar.label}</span>
+                  <span>{bar.value}%</span>
+                </div>
+                <div className="h-2 rounded-full bg-zinc-100">
+                  <div
+                    className={`h-full rounded-full ${bar.color}`}
+                    style={{ width: `${bar.value}%` }}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

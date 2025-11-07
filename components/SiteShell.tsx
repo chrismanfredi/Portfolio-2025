@@ -176,16 +176,16 @@ export function SiteShell({ children }: { children: ReactNode }) {
                 <p className="text-xs font-semibold uppercase tracking-[0.3em] text-zinc-400">
                   Services Offered
                 </p>
-                <div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-1">
+                <div className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-1">
                   {servicesOffered.map((service) => (
                     <div
                       key={service.label}
-                      className="flex flex-col items-center gap-3 rounded-2xl border border-white/70 bg-white/90 px-4 py-3 text-center text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500 shadow-sm ring-1 ring-black/5 sm:flex-row sm:justify-between sm:text-left sm:text-sm sm:normal-case sm:tracking-normal sm:text-zinc-700"
+                      className="flex flex-col items-center gap-3 rounded-2xl border border-white/70 bg-white/90 px-4 py-3 text-center text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500 shadow-sm ring-1 ring-black/5 lg:flex-row lg:justify-between lg:text-left lg:text-sm lg:normal-case lg:tracking-normal lg:text-zinc-700"
                     >
-                      <span className="order-2 w-full sm:order-1 sm:w-auto">
+                      <span className="order-2 w-full lg:order-1 lg:w-auto">
                         {service.label}
                       </span>
-                      <span className="order-1 relative h-8 w-8 overflow-hidden rounded-xl bg-zinc-50 sm:order-2">
+                      <span className="order-1 relative h-8 w-8 overflow-hidden rounded-xl bg-zinc-50 lg:order-2">
                         <Image
                           src={service.icon}
                           alt=""
