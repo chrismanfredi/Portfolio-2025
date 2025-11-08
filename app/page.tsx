@@ -19,13 +19,13 @@ const recentProjects = [
 ] as const;
 
 const strategyHighlights = [
-  { title: "Product Audits", icon: "/file.svg" },
-  { title: "Journey Mapping", icon: "/globe.svg" },
-  { title: "Content Playbooks", icon: "/file.svg" },
-  { title: "Design Sprints", icon: "/window.svg" },
-  { title: "Stakeholder Interviews", icon: "/globe.svg" },
-  { title: "Roadmap Prioritization", icon: "/window.svg" },
-  { title: "Success Metrics", icon: "/file.svg" },
+  { title: "VS Code", icon: "/vscode.jpeg" },
+  { title: "Terminal", icon: "/terminal.png" },
+  { title: "Next.JS", icon: "/nextjs.png" },
+  { title: "Tailwind CSS", icon: "/tailwind.png" },
+  { title: "Github", icon: "/github.png" },
+  { title: "Adobe Photoshop", icon: "/photoshop.png" },
+  { title: "Adobe Illustrator", icon: "/illustrator.png" },
 ] as const;
 
 export default function HomePage() {
@@ -35,7 +35,7 @@ export default function HomePage() {
         <div className="group flex h-full min-h-[180px] flex-col justify-between rounded-3xl border border-transparent bg-white p-8 ring-1 ring-black/5 lg:min-h-[200px] lg:p-10">
           <div className="flex flex-col gap-3">
             <div>
-              <h2 className="text-xl font-semibold text-zinc-900">Expert Area&apos;s</h2>
+              <h2 className="text-xl font-semibold text-zinc-900">Tools</h2>
             </div>
 
             <div className="relative mt-1 h-[22rem] overflow-hidden rounded-2xl border border-zinc-100 bg-white/80 p-5 shadow-inner">
