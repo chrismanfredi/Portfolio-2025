@@ -40,7 +40,7 @@ const socialLinks = [
 ] as const;
 
 const servicesOffered = [
-  { label: "UI/UX Design", icon: "/file.svg" },
+  { label: "UI/UX Design", icon: "/UIUXDesign.png" },
   { label: "Web Development", icon: "/window.svg" },
   { label: "Mobile App Development", icon: "/globe.svg" },
   { label: "SEO-Friendly Code", icon: "/window.svg" },
@@ -91,6 +91,13 @@ export function SiteShell({ children }: { children: ReactNode }) {
                 ))}
               </ul>
             </nav>
+
+            <Link
+              href="/contact"
+              className="ml-auto hidden items-center rounded-xl bg-zinc-900 px-5 py-2 text-sm font-medium text-white transition hover:bg-zinc-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900 md:inline-flex"
+            >
+              Let's Connect
+            </Link>
 
             <button
               type="button"
@@ -172,7 +179,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
                 </div>
               </div>
 
-              <div>
+              <div className="mt-14">
                 <p className="text-xs font-semibold uppercase tracking-[0.3em] text-zinc-400">
                   Services Offered
                 </p>
@@ -180,23 +187,40 @@ export function SiteShell({ children }: { children: ReactNode }) {
                   {servicesOffered.map((service) => (
                     <div
                       key={service.label}
-                      className="flex flex-col items-center gap-3 rounded-2xl border border-white/70 bg-white/90 px-4 py-3 text-center text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500 shadow-sm ring-1 ring-black/5 lg:flex-row lg:justify-between lg:text-left lg:text-sm lg:normal-case lg:tracking-normal lg:text-zinc-700"
+                      className="flex items-center justify-center rounded-2xl border border-white/70 bg-white/90 px-4 py-3 text-center text-xs font-semibold uppercase tracking-[0.2em] text-zinc-600 shadow-sm ring-1 ring-black/5 lg:text-sm lg:normal-case lg:tracking-normal"
                     >
-                      <span className="order-2 w-full lg:order-1 lg:w-auto">
-                        {service.label}
-                      </span>
-                      <span className="order-1 relative h-8 w-8 overflow-hidden rounded-xl bg-zinc-50 lg:order-2">
-                        <Image
-                          src={service.icon}
-                          alt=""
-                          fill
-                          sizes="32px"
-                          className="object-contain p-2"
-                        />
-                      </span>
+                      {service.label}
                     </div>
                   ))}
                 </div>
+              </div>
+
+              <div className="mt-14 rounded-2xl border-2 border-zinc-100 bg-zinc-50/80 p-5">
+                <p className="text-sm font-semibold text-zinc-900">Sign up for my newsletter</p>
+                <p className="mt-1 text-sm text-zinc-600">
+                  Get occasional updates on new projects, resources, and behind-the-scenes notes.
+                </p>
+                <form
+                  className="mt-4 flex flex-col gap-3"
+                  onSubmit={(event) => event.preventDefault()}
+                >
+                  <label htmlFor="newsletter-email" className="sr-only">
+                    Email address
+                  </label>
+                  <input
+                    id="newsletter-email"
+                    type="email"
+                    required
+                    placeholder="you@example.com"
+                    className="w-full rounded-xl border border-zinc-200 bg-white px-3 py-2 text-sm text-zinc-800 outline-none ring-indigo-100 focus:border-zinc-900 focus:ring-2"
+                  />
+                  <button
+                    type="submit"
+                    className="rounded-xl bg-zinc-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-zinc-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-zinc-900"
+                  >
+                    Subscribe
+                  </button>
+                </form>
               </div>
             </aside>
           ) : (
