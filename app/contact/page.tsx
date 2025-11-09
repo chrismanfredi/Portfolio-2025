@@ -1,15 +1,9 @@
 export default function ContactPage() {
   return (
-    <div className="flex flex-col gap-6">
-      <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">Contact</p>
+    <div className="flex flex-col gap-6 -mt-6 sm:-mt-10">
       <h1 className="text-3xl font-semibold text-zinc-900 sm:text-4xl">
         Let&apos;s collaborate.
       </h1>
-      <p className="text-zinc-600">
-        Share a few project details and preferred timelines, and I&apos;ll follow up with a
-        tailored plan, estimates, and next steps.
-      </p>
-
       <form className="flex flex-col gap-5">
         <label className="flex flex-col gap-2 text-sm font-medium text-zinc-700">
           Name
