@@ -7,8 +7,8 @@ import { useState, type ReactNode } from "react";
 
 const navItems = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Works", href: "/works" },
+  { label: "Education", href: "/education" },
+  { label: "Portfolio", href: "/portfolio" },
   { label: "Contact", href: "/contact" },
 ] as const;
 
@@ -73,7 +73,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
             </span>
 
             <nav
-              className="hidden flex-1 justify-center md:flex"
+              className="hidden flex-1 justify-center lg:flex"
               aria-label="Primary navigation"
             >
               <ul className="flex items-center gap-8 text-sm font-medium text-zinc-600">
@@ -102,7 +102,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
             <button
               type="button"
               onClick={toggleMenu}
-              className="ml-auto inline-flex h-10 w-10 items-center justify-center rounded-full border border-zinc-200 text-zinc-700 transition hover:border-zinc-300 hover:text-zinc-900 focus:outline-none focus:ring-2 focus:ring-zinc-400 focus:ring-offset-2 md:hidden"
+              className="ml-auto inline-flex h-10 w-10 items-center justify-center rounded-full border border-zinc-200 text-zinc-700 transition hover:border-zinc-300 hover:text-zinc-900 focus:outline-none focus:ring-2 focus:ring-zinc-400 focus:ring-offset-2 lg:hidden"
               aria-controls="primary-navigation-mobile"
               aria-expanded={mobileMenuOpen}
             >
@@ -118,7 +118,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
           {mobileMenuOpen ? (
             <nav
               id="primary-navigation-mobile"
-              className="md:hidden"
+              className="lg:hidden"
               aria-label="Primary navigation"
             >
               <ul className="flex flex-col gap-3 text-sm font-medium text-zinc-600">
@@ -227,10 +227,10 @@ export function SiteShell({ children }: { children: ReactNode }) {
             <aside className="flex w-full flex-col items-center gap-5 self-start rounded-2xl border-2 border-zinc-200 bg-white px-8 py-8 text-center sm:px-10 lg:w-72">
               <div className="relative h-32 w-32 overflow-hidden rounded-2xl">
                 <Image
-                  src="/profile.jpg"
+                  src="/cartoon.png"
                   alt="Chris Manfredi"
                   fill
-                  className="object-cover object-top"
+                  className="object-cover object-[50%_20%]"
                   sizes="256px"
                   priority
                 />

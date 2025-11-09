@@ -22,11 +22,11 @@ const projects = [
   },
 ] as const;
 
-export default function WorksPage() {
+export default function PortfolioPage() {
   return (
     <div className="flex flex-col gap-8">
       <div className="flex flex-col gap-4">
-        <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">Selected Work</p>
+        <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">Portfolio Highlights</p>
         <h1 className="text-3xl font-semibold text-zinc-900 sm:text-4xl">
           Highlights from recent collaborations.
         </h1>

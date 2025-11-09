@@ -8,19 +8,19 @@ const recentProjects = [
   {
     title: "Track My Time",
     description: "PTO scheduling app simplifies time-off management for modern teams. Employees can easily submit vacation, sick, or personal day requests, while managers approve and track them in real time.",
-    href: "/works",
+    href: "/portfolio",
     image: "/trackmytime.png",
   },
   {
     title: "Slice Station",
     description: "Slice Station is a sleek, responsive website designed for a local pizza restaurant.",
-    href: "/works",
+    href: "/portfolio",
     image: "/slice-station.png",
   },
   {
     title: "Slice Station",
     description: "Slice Station is a sleek, responsive website designed for a local pizza restaurant.",
-    href: "/works",
+    href: "/portfolio",
     image: "/slice-station.png",
   },
 ] as const;
@@ -117,7 +117,7 @@ export default function HomePage() {
 
           <div className="hidden md:block mt-6">
             <span className="text-xs font-semibold uppercase tracking-[0.3em] text-zinc-400">
-              View All Work
+              View Portfolio
             </span>
           </div>
         </div>
