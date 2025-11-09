@@ -1,6 +1,14 @@
 import Image from "next/image";
 
-const educationTimeline = [
+type EducationEntry = {
+  title: string;
+  years: string;
+  description: string;
+  photo: string;
+  major?: string;
+};
+
+const educationTimeline: readonly EducationEntry[] = [
   {
     title: "Stonington High School",
     years: "2009 – 2012",
