@@ -28,7 +28,7 @@ export default function PortfolioPage() {
   return (
     <div className="flex flex-col gap-10 -mt-6 sm:-mt-10">
       <header className="flex flex-col gap-3 text-center lg:text-left">
-        <h1 className="text-3xl font-semibold text-zinc-900 sm:text-4xl">
+        <h1 className="text-3xl text-zinc-900 sm:text-4xl">
           Portfolio
         </h1>
       </header>
@@ -50,7 +50,7 @@ export default function PortfolioPage() {
             </div>
 
             <div className="flex flex-1 flex-col gap-3 p-6">
-              <h2 className="text-xl font-semibold text-zinc-900">{item.title}</h2>
+              <h2 className="text-xl text-zinc-900">{item.title}</h2>
               <p className="text-sm text-zinc-600">{item.description}</p>
               <div className="mt-auto">
                 <span className="inline-flex items-center gap-2 text-sm font-medium text-zinc-900">

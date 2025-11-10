@@ -37,7 +37,7 @@ export default function AboutPage() {
             <p className="text-xs font-semibold uppercase tracking-[0.3em] text-zinc-400">
               Learning Journey
             </p>
-            <h2 className="text-2xl font-semibold text-zinc-900">Education Timeline</h2>
+            <h2 className="text-2xl text-zinc-900">Education Timeline</h2>
             <p className="text-sm text-zinc-600">
               A quick snapshot of the programs, majors, and experiences that continue to shape my
               craft.

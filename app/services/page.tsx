@@ -21,7 +21,7 @@ export default function ServicesPage() {
     <div className="flex flex-col gap-8">
       <div className="flex flex-col gap-4">
         <p className="text-sm uppercase tracking-[0.2em] text-zinc-500">Services</p>
-        <h1 className="text-3xl font-semibold text-zinc-900 sm:text-4xl">
+        <h1 className="text-3xl text-zinc-900 sm:text-4xl">
           Support across the entire product lifecycle.
         </h1>
         <p className="text-zinc-600">
@@ -33,7 +33,7 @@ export default function ServicesPage() {
       <ul className="flex flex-col gap-6">
         {services.map((service) => (
           <li key={service.title} className="rounded-2xl border border-zinc-200 p-6">
-            <h2 className="text-xl font-semibold text-zinc-900">{service.title}</h2>
+            <h2 className="text-xl text-zinc-900">{service.title}</h2>
             <p className="mt-3 text-zinc-600">{service.description}</p>
           </li>
         ))}

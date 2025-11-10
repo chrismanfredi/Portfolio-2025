@@ -1,7 +1,7 @@
 export default function ContactPage() {
   return (
     <div className="flex flex-col gap-6 -mt-6 sm:-mt-10">
-      <h1 className="text-3xl font-semibold text-zinc-900 sm:text-4xl">
+      <h1 className="text-3xl text-zinc-900 sm:text-4xl">
         Let&apos;s collaborate.
       </h1>
       <div className="flex flex-col gap-8 lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] lg:gap-12">

@@ -37,7 +37,7 @@ export default function EducationPage() {
       <div className="grid gap-6">
         <section className="flex flex-col gap-4 p-0">
           <div className="flex flex-col gap-1.5">
-            <h2 className="text-2xl font-semibold text-zinc-900">Education Timeline</h2>
+            <h2 className="text-3xl">Education Timeline</h2>
           </div>
 
           <ol className="relative mt-2 space-y-12 border-l-2 border-zinc-100 pl-4">

@@ -169,7 +169,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
                   />
                 </div>
                 <div className="flex flex-col gap-1">
-                  <h2 className="text-lg font-semibold text-zinc-900">Chris Manfredi</h2>
+                  <h2 className="text-lg text-zinc-900">Chris Manfredi</h2>
                   <p className="text-sm text-zinc-600">
                     Web developer crafting thoughtful digital experiences focused on performance,
                     accessibility, and clean design.
@@ -248,7 +248,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
                 />
               </div>
               <div className="flex flex-col items-center gap-2 text-center">
-                <h2 className="text-lg font-semibold text-zinc-900">
+                <h2 className="text-lg text-zinc-900">
                   Chris Manfredi
                 </h2>
                 <p className="text-sm text-zinc-600">

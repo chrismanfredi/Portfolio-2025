@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import localFont from "next/font/local";
 import { useState } from "react";
 
 const recentProjects = [
@@ -19,10 +18,6 @@ const recentProjects = [
     image: "/ParadiseParkFD.png",
   },
 ] as const;
-
-const vaseline = localFont({
-  src: "../public/Vaseline.ttf",
-});
 
 const strategyHighlights = [
   { title: "VS Code", icon: "/vscode.jpeg" },
@@ -47,7 +42,7 @@ export default function HomePage() {
         <div className="group flex flex-col justify-between rounded-3xl border border-transparent bg-white p-5 ring-1 ring-black/5 lg:p-7">
           <div className="flex flex-col gap-3">
             <div>
-              <h2 className={`${vaseline.className} text-3xl`}>Tools</h2>
+              <h2 className="text-3xl">Tools</h2>
             </div>
 
             <div
@@ -88,7 +83,7 @@ export default function HomePage() {
 
         <div className="flex h-full min-h-[320px] flex-col justify-between rounded-3xl border border-transparent bg-white p-8 ring-1 ring-black/5 md:row-span-2 lg:min-h-[380px] lg:p-10">
           <div className="flex flex-col gap-4">
-            <h2 className={`${vaseline.className} text-3xl`}>Recent Projects</h2>
+            <h2 className="text-3xl">Recent Projects</h2>
             <div className="grid gap-4">
               {recentProjects.map((project) => (
                 <Link
@@ -123,7 +118,7 @@ export default function HomePage() {
 
         <div className="flex h-full min-h-[140px] flex-col gap-5 rounded-3xl border-2 border-zinc-200 bg-white p-6 lg:min-h-[180px] lg:p-8">
           <div className="flex flex-col gap-2">
-            <h2 className={`${vaseline.className} text-3xl`}>Skills</h2>
+            <h2 className="text-3xl">Skills</h2>
           </div>
           <div className="flex flex-col gap-6 lg:mx-auto lg:mt-4 lg:w-4/5 lg:justify-center">
             {[
