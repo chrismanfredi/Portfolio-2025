@@ -12,16 +12,10 @@ const recentProjects = [
     image: "/trackmytime.png",
   },
   {
-    title: "Slice Station",
-    description: "Slice Station is a sleek, responsive website designed for a local pizza restaurant.",
+    title: "Paradise Park Fire Department",
+    description: "The Paradise Park Fire Department is a dedicated volunteer team serving the community with safety, emergency response, and local outreach events.",
     href: "/portfolio",
-    image: "/slice-station.png",
-  },
-  {
-    title: "Slice Station",
-    description: "Slice Station is a sleek, responsive website designed for a local pizza restaurant.",
-    href: "/portfolio",
-    image: "/slice-station.png",
+    image: "/ParadiseParkFD.png",
   },
 ] as const;
 

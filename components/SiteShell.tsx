@@ -148,7 +148,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
               <div className="flex flex-col items-center gap-4 text-center">
                 <div className="relative h-32 w-32 overflow-hidden rounded-2xl">
                   <Image
-                    src="/cartoon.png"
+                    src="/pic.jpg"
                     alt="Chris Manfredi"
                     fill
                     className="object-cover object-[50%_20%]"
@@ -227,7 +227,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
             <aside className="flex w-full flex-col items-center gap-5 self-start rounded-2xl border-2 border-zinc-200 bg-white px-8 py-8 text-center sm:px-10 lg:w-72">
               <div className="relative h-32 w-32 overflow-hidden rounded-2xl">
                 <Image
-                  src="/cartoon.png"
+                  src="/pic.jpg"
                   alt="Chris Manfredi"
                   fill
                   className="object-cover object-[50%_20%]"

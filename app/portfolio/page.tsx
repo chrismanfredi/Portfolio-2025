@@ -14,28 +14,10 @@ const portfolioItems = [
     image: "/slice-station.png",
   },
   {
-    title: "Atlas Creative",
+    title: "Paradise Park Fire Department",
     description:
-      "Brand refresh and marketing site built on a modular content system so campaigns can launch in hours, not weeks.",
-    image: "/nextjs.png",
-  },
-  {
-    title: "Northwind Labs",
-    description:
-      "Interactive prototype library that evolved into a production design system for a data tooling startup.",
-    image: "/tailwind.png",
-  },
-  {
-    title: "Summit Analytics",
-    description:
-      "Executive dashboard with live telemetry, custom alerts, and a fully accessible component toolkit.",
-    image: "/supabase.png",
-  },
-  {
-    title: "Vercel Launchpad",
-    description:
-      "High-performance landing page optimized for conversions, complete with a/b tested hero blocks and pricing cards.",
-    image: "/vercel.png",
+      "The Paradise Park Fire Department is a dedicated volunteer team serving the community with safety, emergency response, and local outreach events.",
+    image: "/ParadiseParkFD.png",
   },
 ] as const;
 
@@ -44,7 +26,7 @@ export default function PortfolioPage() {
     <div className="flex flex-col gap-10 -mt-6 sm:-mt-10">
       <header className="flex flex-col gap-3 text-center lg:text-left">
         <h1 className="text-3xl font-semibold text-zinc-900 sm:text-4xl">
-          Modern builds for ambitious teams.
+          Portfolio
         </h1>
       </header>
 
@@ -69,21 +51,6 @@ export default function PortfolioPage() {
               <p className="text-sm text-zinc-600">{item.description}</p>
               <div className="mt-auto">
                 <span className="inline-flex items-center gap-2 text-sm font-medium text-zinc-900">
-                  View Case Study
-                  <svg
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                    className="h-4 w-4 transition group-hover:translate-x-1"
-                  >
-                    <path
-                      d="M6 12h12m0 0-4-4m4 4-4 4"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth={1.5}
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
                 </span>
               </div>
             </div>
