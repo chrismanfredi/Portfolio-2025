@@ -5,18 +5,21 @@ const portfolioItems = [
     title: "Track My Time",
     description:
       "PTO and vacation scheduling experience that lets teams plan time off collaboratively with real-time approvals.",
+    href: "https://track-my-time-v2.vercel.app/",
     image: "/trackmytime.png",
   },
   {
     title: "Slice Station",
     description:
       "Responsive microsite for a neighborhood pizza spot featuring interactive menus, deals, and online ordering states.",
+    href: "https://slice-station.vercel.app/",
     image: "/slice-station.png",
   },
   {
     title: "Paradise Park Fire Department",
     description:
       "The Paradise Park Fire Department is a dedicated volunteer team serving the community with safety, emergency response, and local outreach events.",
+    href: "https://paradise-park-fd.vercel.app/",
     image: "/ParadiseParkFD.png",
   },
 ] as const;

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { SiteShell } from "@/components/SiteShell";
 
@@ -11,6 +12,11 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const coolvetica = localFont({
+  src: "../public/Coolvetica.otf",
+  variable: "--font-coolvetica",
 });
 
 export const metadata: Metadata = {
@@ -26,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} min-h-screen bg-white antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${coolvetica.variable} min-h-screen bg-white antialiased`}
       >
         <div
           aria-hidden

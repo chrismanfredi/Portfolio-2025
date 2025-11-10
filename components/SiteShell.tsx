@@ -15,7 +15,7 @@ const navItems = [
 const socialLinks = [
   {
     label: "GitHub",
-    href: "https://github.com/",
+    href: "https://github.com/chrismanfredi",
     icon: (
       <svg aria-hidden="true" viewBox="0 0 24 24" className="h-5 w-5">
         <path
@@ -27,12 +27,24 @@ const socialLinks = [
   },
   {
     label: "LinkedIn",
-    href: "https://www.linkedin.com/",
+    href: "https://www.linkedin.com/in/christopher-manfredi-3a381b205/",
     icon: (
       <svg aria-hidden="true" viewBox="0 0 24 24" className="h-5 w-5">
         <path
           fill="currentColor"
           d="M20.45 20.45h-3.55v-5.56c0-1.33 0-3.05-1.86-3.05s-2.14 1.45-2.14 2.95v5.66h-3.55V9h3.41v1.56h.05c.48-.9 1.66-1.86 3.42-1.86 3.65 0 4.32 2.4 4.32 5.52v6.23ZM6.55 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM8.33 20.45H4.77V9h3.56v11.45Z"
+        />
+      </svg>
+    ),
+  },
+  {
+    label: "Facebook",
+    href: "https://www.facebook.com/chris.manfredi1",
+    icon: (
+      <svg aria-hidden="true" viewBox="0 0 24 24" className="h-5 w-5">
+        <path
+          fill="currentColor"
+          d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.77c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.45h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12Z"
         />
       </svg>
     ),
@@ -196,7 +208,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
               </div>
 
               <div className="mt-14 rounded-2xl border-2 border-zinc-100 bg-zinc-50/80 p-5">
-                <p className="text-sm font-semibold text-zinc-900">Sign up for my newsletter</p>
+                <p className="text-sm text-zinc-900">Sign up for my newsletter</p>
                 <p className="mt-1 text-sm text-zinc-600">
                   Get occasional updates on new projects, resources, and behind-the-scenes notes.
                 </p>
